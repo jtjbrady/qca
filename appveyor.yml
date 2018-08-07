@@ -21,7 +21,7 @@ after_build:
     
     Start-Process "$env:WIX\bin\light.exe" -ArgumentList "-nologo qca2.wixobj -out qca2.msi -ext WixUIExtension" -Wait
     
-    # $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+    $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 test:
   assemblies:
     only:
