@@ -1,0 +1,30 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Release
+clone_folder: C:\projects\qca
+init:
+- ps: "# $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))"
+environment:
+  QT5: C:\Qt\5.11.1\msvc2017_64
+  PATH: '%PATH%;%QT5%\bin'
+before_build:
+- cmd: >-
+    cmake C:\projects\qca -G "Visual Studio 15 2017 Win64" "-DCMAKE_PREFIX_PATH=%QT5%"
+    
+    dir C:\projects\qca
+build:
+  project: INSTALL.vcxproj
+  verbosity: minimal
+after_build:
+- cmd: >-
+    "%WIX%\bin\candle.exe" -nologo qca2.wxs -out qca2.wixobj -ext WixUIExtension
+    
+    "%WIX%\bin\light.exe" -nologo qca2.wixobj -out qca2.msi -ext WixUIExtension
+
+test:
+  assemblies:
+    only:
+    - qca\bin\Release\*.exe
+artifacts:
+- path: qca2.msi
+  name: qca2.msi

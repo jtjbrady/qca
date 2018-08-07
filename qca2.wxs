@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="11cd9b87-a189-436f-bad5-62dcc0a058ca" Name="QCA2" Language="2057" Version="2.1.0" Manufacturer="YourCompanyNameHere" UpgradeCode="331e3ecf-d386-4f42-acd1-94b4a5576a2b">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <Condition Message="This application is only supported on Windows 7, Windows Server 2008 R2, or higher."><![CDATA[Installed OR (VersionNT >= 601)]]></Condition>
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="QtFolder" Name="Qt">
+        <Directory Id="QtVersionFolder" Name="5.11.1">
+          <Directory Id="INSTALLLOCATION" Name="msvc2017_64"></Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <DirectoryRef Id="INSTALLLOCATION">
+      <Directory Id="QtBinFolder" Name="bin">
+        <Component Id="mozcerts.exe" Guid="7CA0A90B-D282-4C4C-89E5-894174820DDA">
+          <File Id="mozcerts.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\mozcerts-qt5.exe" KeyPath="yes" Checksum="yes" />
+        </Component>
+        <Component Id="qca.dll" Guid="EB5C03AE-F65B-4E32-9659-7A29BE7A4C82">
+          <File Id="qca.dll" Source="C:\Qt\5.11.1\msvc2017_64\bin\qca-qt5.dll" KeyPath="yes" Checksum="yes" />
+        </Component>
+        <Component Id="qcatool.exe" Guid="1AB5CD77-DBE7-4276-B219-F5E995CCCE46">
+          <File Id="qcatool.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\qcatool-qt5.exe" KeyPath="yes" Checksum="yes" />
+        </Component>
+      </Directory>
+      <Directory Id="QtCryptoCertsFolder" Name="certs">
+        <Component Id="rootcerts.pem" Guid="D3292F4C-12B7-4E1F-A1B9-09D13D618940">
+          <File Id="rootcerts.pem" Source="C:\Qt\5.11.1\msvc2017_64\certs\rootcerts.pem" KeyPath="yes" />
+        </Component>
+      </Directory>
+      <Directory Id="QtIncludeFolder" Name="include">
+        <Directory Id="QtCryptoIncludeFolder" Name="QtCrypto">
+          <Component Id="qca.h" Guid="C979C9A7-6AA7-4A21-B8C9-678C09D65CF6">
+            <File Id="qca.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qcaprovider.h" Guid="97F460F8-037E-45CC-906A-9763F858CA5C">
+            <File Id="qcaprovider.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qcaprovider.h" KeyPath="yes" />
+          </Component>
+          <Component Id="QtCrypto" Guid="202F7E69-C19A-47D3-BAE0-96E0606051CD">
+            <File Id="QtCrypto" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\QtCrypto" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_export.h" Guid="6080096A-40B4-4C84-82CF-6B2357FC2601">
+            <File Id="qca_export.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_export.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_support.h" Guid="FB0E052D-F87E-4751-AC28-DACE93F56A38">
+            <File Id="qca_support.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_support.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_tools.h" Guid="BDE5329E-905C-49DE-8E79-4A175BF687AB">
+            <File Id="qca_tools.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_tools.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_core.h" Guid="09837D76-6871-44FF-BC9D-93B840275FB0">
+            <File Id="qca_core.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_core.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_textfilter.h" Guid="9A8271AD-76DD-48A0-BAD0-FFAC2073637F">
+            <File Id="qca_textfilter.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_textfilter.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_basic.h" Guid="FEE2D9DC-5D27-43E8-BDC4-9BFF64A34518">
+            <File Id="qca_basic.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_basic.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_publickey.h" Guid="277D9403-7869-446E-AAF2-7684537611AC">
+            <File Id="qca_publickey.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_publickey.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_cert.h" Guid="594F0E71-E448-4286-8857-77BC817EF739">
+            <File Id="qca_cert.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_cert.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_keystore.h" Guid="EBAA5215-9215-4AE8-AEAD-DE0AE5665156">
+            <File Id="qca_keystore.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_keystore.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_securelayer.h" Guid="B40DF537-DAA4-435C-BE36-C33230A24ED0">
+            <File Id="qca_securelayer.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_securelayer.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_securemessage.h" Guid="54B6127E-E5E0-452A-B97E-F062B9A509BB">
+            <File Id="qca_securemessage.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_securemessage.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_version.h" Guid="412B029C-898E-4BA7-9AF7-A2680E94E4C5">
+            <File Id="qca_version.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_version.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qpipe.h" Guid="0C4CFB31-460B-49DF-BEC2-D11AEE706882">
+            <File Id="qpipe.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qpipe.h" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_safetimer.h" Guid="249A9733-D48F-48B8-937E-5519696A055E">
+            <File Id="qca_safetimer.h" Source="C:\Qt\5.11.1\msvc2017_64\include\Qca-qt5\QtCrypto\qca_safetimer.h" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="QtLibFolder" Name="lib">
+        <Component Id="qca.lib" Guid="2BE3353D-A525-4833-8D62-ED0A4D8F1FEC">
+          <File Id="qca.lib" Source="C:\Qt\5.11.1\msvc2017_64\lib\qca-qt5.lib" KeyPath="yes" />
+        </Component>
+        <Directory Id="CMakeFolder" Name="cmake">
+          <Directory Id="QCACMakeFolder" Name="Qca">
+            <Component Id="QcaTargets.cmake" Guid="7514722A-0971-45E1-B904-A9A971C2395E">
+              <File Id="QcaTargets.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets.cmake" KeyPath="yes" />
+            </Component>
+            <Component Id="QcaTargets_release.cmake" Guid="3FC1DE69-9337-4942-B6C7-9A988C54659F">
+              <File Id="QcaTargets_release.cmake" Name="Qca-qt5Targets-release.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets-release.cmake" KeyPath="yes" />
+            </Component>
+            <Component Id="QcaConfig.cmake" Guid="97F77F4A-D925-40D0-9D12-A2F9B4459B4D">
+              <File Id="QcaConfig.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Config.cmake" KeyPath="yes" />
+            </Component>
+            <Component Id="QcaConfigVersion.cmake" Guid="2EA19B53-F9E8-4425-8471-572F8885ECED">
+              <File Id="QcaConfigVersion.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5ConfigVersion.cmake" KeyPath="yes" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="QtMkspecsFolder" Name="mkspecs">
+        <Directory Id="QtFeaturesFolder" Name="features">
+          <Component Id="crypto.prf" Guid="A5AA6A9D-7691-478A-8A18-A254A48CB065">
+            <File Id="crypto.prf" Source="C:\Qt\5.11.1\msvc2017_64\mkspecs\features\crypto.prf" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="ManFolder" Name="man">
+        <Directory Id="Man1Folder" Name="man1">
+          <Component Id="qcatool.1" Guid="C51DA0DD-D9CB-42EB-943F-9EF439C6BECA">
+            <File Id="qcatool.1" Source="C:\Qt\5.11.1\msvc2017_64\man\man1\qcatool-qt5.1" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="QtPluginsFolder" Name="plugins">
+        <Directory Id="QCAPluginFolder" Name="crypto">
+          <Component Id="qca_gnupg.dll" Guid="2ED01136-85A8-47C5-8904-3DB1A560C747">
+            <File Id="qca_gnupg.dll" Name="qca-gnupg.dll" Source="C:\Qt\5.11.1\msvc2017_64\plugins\crypto\qca-gnupg.dll" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_logger.dll" Guid="0B7021AF-8C86-4AC4-94EE-932E892B5004">
+            <File Id="qca_logger.dll" Name="qca-logger.dll" Source="C:\Qt\5.11.1\msvc2017_64\plugins\crypto\qca-logger.dll" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_ossl.dll" Guid="D15A79B8-4689-4853-A53C-0DF6F4156AAF">
+            <File Id="qca_ossl.dll" Name="qca-ossl.dll" Source="C:\Qt\5.11.1\msvc2017_64\plugins\crypto\qca-ossl.dll" KeyPath="yes" />
+          </Component>
+          <Component Id="qca_softstore.dll" Guid="402A0B60-016B-4861-8CF5-4FD300ABD007">
+            <File Id="qca_softstore.dll" Name="qca-softstore.dll" Source="C:\Qt\5.11.1\msvc2017_64\plugins\crypto\qca-softstore.dll" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+    </DirectoryRef>
+    <Feature Id="QCA" Title="QCA" Level="1" Absent="disallow" ConfigurableDirectory="INSTALLLOCATION" Description="Qt Cryptographic Architecture">
+      <ComponentRef Id="mozcerts.exe" />
+      <ComponentRef Id="qca.dll" />
+      <ComponentRef Id="qcatool.exe" />
+      <ComponentRef Id="rootcerts.pem" />
+      <ComponentRef Id="qca.h" />
+      <ComponentRef Id="qcaprovider.h" />
+      <ComponentRef Id="QtCrypto" />
+      <ComponentRef Id="qca_export.h" />
+      <ComponentRef Id="qca_support.h" />
+      <ComponentRef Id="qca_tools.h" />
+      <ComponentRef Id="qca_core.h" />
+      <ComponentRef Id="qca_textfilter.h" />
+      <ComponentRef Id="qca_basic.h" />
+      <ComponentRef Id="qca_publickey.h" />
+      <ComponentRef Id="qca_cert.h" />
+      <ComponentRef Id="qca_keystore.h" />
+      <ComponentRef Id="qca_securelayer.h" />
+      <ComponentRef Id="qca_securemessage.h" />
+      <ComponentRef Id="qca_version.h" />
+      <ComponentRef Id="qpipe.h" />
+      <ComponentRef Id="qca_safetimer.h" />
+      <ComponentRef Id="qca.lib" />
+      <ComponentRef Id="QcaTargets.cmake" />
+      <ComponentRef Id="QcaTargets_release.cmake" />
+      <ComponentRef Id="QcaConfig.cmake" />
+      <ComponentRef Id="QcaConfigVersion.cmake" />
+      <ComponentRef Id="crypto.prf" />
+      <ComponentRef Id="qcatool.1" />
+      <ComponentRef Id="qca_gnupg.dll" />
+      <ComponentRef Id="qca_logger.dll" />
+      <ComponentRef Id="qca_ossl.dll" />
+      <ComponentRef Id="qca_softstore.dll" />
+    </Feature>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+    <WixVariable Id="WixUILicenseRtf" Value="COPYING" />
+    <UIRef Id="WixUI_InstallDir" />
+    <UI />
+  </Product>
+</Wix>
