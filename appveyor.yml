@@ -16,12 +16,11 @@ build:
   project: INSTALL.vcxproj
   verbosity: minimal
 after_build:
-- ps: >-
-    Start-Process "$env:WIX\bin\candle.exe" -ArgumentList "-nologo qca2.wxs -out qca2.wixobj -ext WixUIExtension" -Wait
+- cmd: >-
+    "%WIX%\bin\candle.exe" -nologo qca2.wxs -out qca2.wixobj -ext WixUIExtension
     
-    Start-Process "$env:WIX\bin\light.exe" -ArgumentList "-nologo qca2.wixobj -out qca2.msi -ext WixUIExtension" -Wait
-    
-    $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+    "%WIX%\bin\light.exe" -nologo qca2.wixobj -out qca2.msi -ext WixUIExtension
+
 test:
   assemblies:
     only:
