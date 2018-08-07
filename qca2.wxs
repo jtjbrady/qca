@@ -93,13 +93,13 @@
               <File Id="QcaTargets.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets.cmake" KeyPath="yes" />
             </Component>
             <Component Id="QcaTargets_release.cmake" Guid="3FC1DE69-9337-4942-B6C7-9A988C54659F">
-              <File Id="QcaTargets_release.cmake" Name="Qca-qt5Targets-release.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Targets-release.cmake" KeyPath="yes" />
+              <File Id="QcaTargets_release.cmake" Name="Qca-qt5Targets-release.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets-release.cmake" KeyPath="yes" />
             </Component>
             <Component Id="QcaConfig.cmake" Guid="97F77F4A-D925-40D0-9D12-A2F9B4459B4D">
-              <File Id="QcaConfig.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Config.cmake" KeyPath="yes" />
+              <File Id="QcaConfig.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Config.cmake" KeyPath="yes" />
             </Component>
             <Component Id="QcaConfigVersion.cmake" Guid="2EA19B53-F9E8-4425-8471-572F8885ECED">
-              <File Id="QcaConfigVersion.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5ConfigVersion.cmake" KeyPath="yes" />
+              <File Id="QcaConfigVersion.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5ConfigVersion.cmake" KeyPath="yes" />
             </Component>
           </Directory>
         </Directory>
