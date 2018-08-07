@@ -13,14 +13,14 @@
     </Directory>
     <DirectoryRef Id="INSTALLLOCATION">
       <Directory Id="QtBinFolder" Name="bin">
-        <Component Id="mozcerts-qt5.exe" Guid="7CA0A90B-D282-4C4C-89E5-894174820DDA">
-          <File Id="mozcerts-qt5.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\mozcerts-qt5.exe" KeyPath="yes" Checksum="yes" />
+        <Component Id="mozcerts.exe" Guid="7CA0A90B-D282-4C4C-89E5-894174820DDA">
+          <File Id="mozcerts.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\mozcerts-qt5.exe" KeyPath="yes" Checksum="yes" />
         </Component>
-        <Component Id="qca-qt5.dll" Guid="EB5C03AE-F65B-4E32-9659-7A29BE7A4C82">
-          <File Id="qca-qt5.dll" Source="C:\Qt\5.11.1\msvc2017_64\bin\qca-qt5.dll" KeyPath="yes" Checksum="yes" />
+        <Component Id="qca.dll" Guid="EB5C03AE-F65B-4E32-9659-7A29BE7A4C82">
+          <File Id="qca.dll" Source="C:\Qt\5.11.1\msvc2017_64\bin\qca-qt5.dll" KeyPath="yes" Checksum="yes" />
         </Component>
-        <Component Id="qcatool-qt5.exe" Guid="1AB5CD77-DBE7-4276-B219-F5E995CCCE46">
-          <File Id="qcatool-qt5.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\qcatool-qt5.exe" KeyPath="yes" Checksum="yes" />
+        <Component Id="qcatool.exe" Guid="1AB5CD77-DBE7-4276-B219-F5E995CCCE46">
+          <File Id="qcatool.exe" Source="C:\Qt\5.11.1\msvc2017_64\bin\qcatool-qt5.exe" KeyPath="yes" Checksum="yes" />
         </Component>
       </Directory>
       <Directory Id="QtCryptoCertsFolder" Name="certs">
@@ -84,22 +84,22 @@
         </Directory>
       </Directory>
       <Directory Id="QtLibFolder" Name="lib">
-        <Component Id="qca-qt5.lib" Guid="2BE3353D-A525-4833-8D62-ED0A4D8F1FEC">
-          <File Id="qca-qt5.lib" Source="C:\Qt\5.11.1\msvc2017_64\lib\qca-qt5.lib" KeyPath="yes" />
+        <Component Id="qca.lib" Guid="2BE3353D-A525-4833-8D62-ED0A4D8F1FEC">
+          <File Id="qca.lib" Source="C:\Qt\5.11.1\msvc2017_64\lib\qca-qt5.lib" KeyPath="yes" />
         </Component>
         <Directory Id="CMakeFolder" Name="cmake">
           <Directory Id="QCACMakeFolder" Name="Qca">
-            <Component Id="Qca-qt5Targets.cmake" Guid="7514722A-0971-45E1-B904-A9A971C2395E">
-              <File Id="Qca-qt5Targets.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets.cmake" KeyPath="yes" />
+            <Component Id="QcaTargets.cmake" Guid="7514722A-0971-45E1-B904-A9A971C2395E">
+              <File Id="QcaTargets.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca-qt5\Qca-qt5Targets.cmake" KeyPath="yes" />
             </Component>
-            <Component Id="Qca-qt5Targets_release.cmake" Guid="3FC1DE69-9337-4942-B6C7-9A988C54659F">
-              <File Id="Qca-qt5Targets_release.cmake" Name="Qca-qt5Targets-release.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Targets-release.cmake" KeyPath="yes" />
+            <Component Id="QcaTargets_release.cmake" Guid="3FC1DE69-9337-4942-B6C7-9A988C54659F">
+              <File Id="QcaTargets_release.cmake" Name="Qca-qt5Targets-release.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Targets-release.cmake" KeyPath="yes" />
             </Component>
-            <Component Id="Qca-qt5Config.cmake" Guid="97F77F4A-D925-40D0-9D12-A2F9B4459B4D">
-              <File Id="Qca-qt5Config.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Config.cmake" KeyPath="yes" />
+            <Component Id="QcaConfig.cmake" Guid="97F77F4A-D925-40D0-9D12-A2F9B4459B4D">
+              <File Id="QcaConfig.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5Config.cmake" KeyPath="yes" />
             </Component>
-            <Component Id="Qca-qt5ConfigVersion.cmake" Guid="2EA19B53-F9E8-4425-8471-572F8885ECED">
-              <File Id="Qca-qt5ConfigVersion.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5ConfigVersion.cmake" KeyPath="yes" />
+            <Component Id="QcaConfigVersion.cmake" Guid="2EA19B53-F9E8-4425-8471-572F8885ECED">
+              <File Id="QcaConfigVersion.cmake" Source="C:\Qt\5.11.1\msvc2017_64\lib\cmake\Qca\Qca-qt5ConfigVersion.cmake" KeyPath="yes" />
             </Component>
           </Directory>
         </Directory>
@@ -113,8 +113,8 @@
       </Directory>
       <Directory Id="ManFolder" Name="man">
         <Directory Id="Man1Folder" Name="man1">
-          <Component Id="qcatool-qt5.1" Guid="C51DA0DD-D9CB-42EB-943F-9EF439C6BECA">
-            <File Id="qcatool-qt5.1" Source="C:\Qt\5.11.1\msvc2017_64\man\man1\qcatool-qt5.1" KeyPath="yes" />
+          <Component Id="qcatool.1" Guid="C51DA0DD-D9CB-42EB-943F-9EF439C6BECA">
+            <File Id="qcatool.1" Source="C:\Qt\5.11.1\msvc2017_64\man\man1\qcatool-qt5.1" KeyPath="yes" />
           </Component>
         </Directory>
       </Directory>
@@ -136,9 +136,9 @@
       </Directory>
     </DirectoryRef>
     <Feature Id="QCA" Title="QCA" Level="1" Absent="disallow" ConfigurableDirectory="INSTALLLOCATION" Description="Qt Cryptographic Architecture">
-      <ComponentRef Id="mozcerts-qt5.exe" />
-      <ComponentRef Id="qca-qt5.dll" />
-      <ComponentRef Id="qcatool-qt5.exe" />
+      <ComponentRef Id="mozcerts.exe" />
+      <ComponentRef Id="qca.dll" />
+      <ComponentRef Id="qcatool.exe" />
       <ComponentRef Id="rootcerts.pem" />
       <ComponentRef Id="qca.h" />
       <ComponentRef Id="qcaprovider.h" />
@@ -157,13 +157,13 @@
       <ComponentRef Id="qca_version.h" />
       <ComponentRef Id="qpipe.h" />
       <ComponentRef Id="qca_safetimer.h" />
-      <ComponentRef Id="qca-qt5.lib" />
-      <ComponentRef Id="Qca-qt5Targets.cmake" />
-      <ComponentRef Id="Qca-qt5Targets_release.cmake" />
-      <ComponentRef Id="Qca-qt5Config.cmake" />
-      <ComponentRef Id="Qca-qt5ConfigVersion.cmake" />
+      <ComponentRef Id="qca.lib" />
+      <ComponentRef Id="QcaTargets.cmake" />
+      <ComponentRef Id="QcaTargets_release.cmake" />
+      <ComponentRef Id="QcaConfig.cmake" />
+      <ComponentRef Id="QcaConfigVersion.cmake" />
       <ComponentRef Id="crypto.prf" />
-      <ComponentRef Id="qcatool-qt5.1" />
+      <ComponentRef Id="qcatool.1" />
       <ComponentRef Id="qca_gnupg.dll" />
       <ComponentRef Id="qca_logger.dll" />
       <ComponentRef Id="qca_ossl.dll" />
